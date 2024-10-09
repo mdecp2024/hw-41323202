@@ -9,11 +9,12 @@
 <p>Teams 線上教學:</p>
 <p style="padding-left: 30px;">以 "學號@nfu.edu.tw" 登入 <a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/</a> Office 365</p>
 <p style="padding-left: 30px;">Teams 團隊代碼: <span class="fui-Text ___vec8h90 fk6fouc f1pbo8a8 f1i3iumi figsok6 fpgzoln f1w7gpdv f6juhto f1mtd64y f1y7q3j9 f2jf649 foxqkq2" data-tid="join-team-code">ldodwua</span></p>
-<p>個人倉儲:</p>
-<p>個人網站:</p>
+<p>個人倉儲:<a href="https://github.com/mdecp2024/hw-41323202">https://github.com/mdecp2024/hw-41323202</a></p>
+<p>個人網站:<a href="https://mdecp2024.github.io/hw-41323202/content/index.html">https://mdecp2024.github.io/hw-41323202/content/index.html</a></p>
 <p>其他資訊:</p>
 <p style="padding-left: 30px;"><a href="/downloads/cd2023_pj3ag4_zmq_football_4.7.7z">cd2023_pj3ag4_zmq_football_4.7.7z</a></p>
-<p style="padding-left: 30px;"><a href="https://localhost:9446/downloads/cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z">cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z</a></p><h1>Attendance</h1>
+<p style="padding-left: 30px;"><a href="https://localhost:9446/downloads/cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z">cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z</a></p>
+<h1>Attendance</h1>
 <p>出席 (10%) - 自行舉證評分</p>
 <p>自行利用 Github commits 提交記錄評分.</p>
 <h1>HW 1</h1>
@@ -56,7 +57,37 @@
 <h2>HW 3 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 3 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
-<h1>HW 4</h1>
+<h3>w7</h3>
+<p><span>瞭解  Python 變數命名法則:</span></p>
+<p>help_print.py</p>
+<p>help_range.py</p>
+<p>triangle_star.py</p>
+<p></p>
+<p>以下是用 Python 生成 20 個最簡單的五階金字塔（以 <code>*</code> 表示）的程式碼：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def print_pyramid(levels):
+    for i in range(levels):
+        spaces = ' ' * (levels - i - 1)
+        stars = '*' * (2 * i + 1)
+        print(spaces + stars)
+
+# 設定金字塔的層數
+levels = 5
+
+# 生成 20 個五階金字塔
+for j in range(20):
+    print(f"金字塔 {j + 1}:")
+    print_pyramid(levels)
+    print()  # 每個金字塔之間留空行
+</pre>
+<p><span>以下是完整的程式碼和註解：</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">n = 5  # 總共的行數
+ 
+for i in range(n):  # 對於每一行
+    # 印出空格
+    print(' ' * (n - i - 1), end='')  # 在每行前面印出空格
+    # 印出星號
+    print('*' * (2 * i + 1))  # 每行印出 2*i + 1 個星號</pre>
+<p></p><h1>HW 4</h1>
 <h4>主題: 利用 Python 控制機電模擬系統 (20%)</h4>
 <p style="padding-left: 30px;">利用 <a href="https://solvespace.com/">https://solvespace.com/</a> 建立機械系統零組件</p>
 <p style="padding-left: 30px;">利用 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 建立機電模擬系統</p>

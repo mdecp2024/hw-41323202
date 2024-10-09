@@ -2,7 +2,7 @@
         <head>
         <title>cp_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -141,15 +141,37 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w7 << <a href='w7.html'>Previous</a> <a href='HW 4 Exam.html'>Next</a> >> HW 4 Exam<br /><h1>HW 4</h1>
-<h4>主題: 利用 Python 控制機電模擬系統 (20%)</h4>
-<p style="padding-left: 30px;">利用 <a href="https://solvespace.com/">https://solvespace.com/</a> 建立機械系統零組件</p>
-<p style="padding-left: 30px;">利用 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 建立機電模擬系統</p>
-<p style="padding-left: 30px;">利用 <a href="https://manual.coppeliarobotics.com/en/zmqRemoteApiOverview.htm">Python</a> 跨網路控制瀏覽器上的機電模擬系統</p>
-<p style="padding-left: 30px;">範例:</p>
-<p style="padding-left: 60px;"><a href="./../downloads/cd2023_pj3ag4_zmq_football_4.7.7z">cd2023_pj3ag4_zmq_football_4.7.7z</a></p>
-<p style="padding-left: 60px;"><a href="https://localhost:9446/downloads/cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z">cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z</a></p>
-<p>完成上述流程整理後, 請將 HW4 自評分數輸入 cp2024 自評表單中.</p><br />w7 << <a href='w7.html'>Previous</a> <a href='HW 4 Exam.html'>Next</a> >> HW 4 Exam</div>
+    <div id="tipue_search_content">HW 3 Exam << <a href='HW 3 Exam.html'>Previous</a> <a href='HW 4.html'>Next</a> >> HW 4<br /><h1>w7</h1>
+<p><span>瞭解  Python 變數命名法則:</span></p>
+<p><a href="./../downloads/help_print.py">help_print.py</a></p>
+<p><a href="./../downloads/help_range.py">help_range.py</a></p>
+<p><a href="./../downloads/triangle_star.py">triangle_star.py</a></p>
+<p></p>
+<p>以下是用 Python 生成 20 個最簡單的五階金字塔（以 <code>*</code> 表示）的程式碼：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def print_pyramid(levels):
+    for i in range(levels):
+        spaces = ' ' * (levels - i - 1)
+        stars = '*' * (2 * i + 1)
+        print(spaces + stars)
+
+# 設定金字塔的層數
+levels = 5
+
+# 生成 20 個五階金字塔
+for j in range(20):
+    print(f"金字塔 {j + 1}:")
+    print_pyramid(levels)
+    print()  # 每個金字塔之間留空行
+</pre>
+<p><span>以下是完整的程式碼和註解：</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">n = 5  # 總共的行數
+ 
+for i in range(n):  # 對於每一行
+    # 印出空格
+    print(' ' * (n - i - 1), end='')  # 在每行前面印出空格
+    # 印出星號
+    print('*' * (2 * i + 1))  # 每行印出 2*i + 1 個星號</pre>
+<p></p><br />HW 3 Exam << <a href='HW 3 Exam.html'>Previous</a> <a href='HW 4.html'>Next</a> >> HW 4</div>
         
     <!-- footer -->
       <div class="container">
