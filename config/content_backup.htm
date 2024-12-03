@@ -118,9 +118,42 @@ for i in range(width):
         ctx.stroke();
 </pre>
 <p></p><h3>w12</h3>
-<p>第一題:input(), and print()</p>
+<p>第一題:Text, questions, and art (文字、問題和藝術)</p>
+<p>說明:Strings, input(), and print() (字串、input()和print())</p>
 <p><span>input()程式範例:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/b4b0ccdf0be5e3d9a9eadffcd4761fbc/raw/2032b60c0697a64b9dfb28a95a1f9dbc43b7f2db/w12-1.1.py">What's your name?</a></span></p>
-<p><span>print()程式範例:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/b4b0ccdf0be5e3d9a9eadffcd4761fbc/raw/2032b60c0697a64b9dfb28a95a1f9dbc43b7f2db/w12-1.2.py">貓</a></span></p><h1>HW 2</h1>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">input("What's your name?")</pre>
+<p><span>print()程式範例:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/b4b0ccdf0be5e3d9a9eadffcd4761fbc/raw/2032b60c0697a64b9dfb28a95a1f9dbc43b7f2db/w12-1.2.py">cat</a></span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">print ("   /\_/\   ")
+print (" &gt;^.^&lt;   ")
+print ("    / \    ")
+print ("   (___)___")</pre>
+<p></p>
+<p>第二題:Events and favorites(活動和最愛)</p>
+<p>說明:Variables and string concatenation(變數和字串連接)</p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/8214869adb6c98a2f05dfd4610676df5/raw/477730323d74f19acc83ec2e6c4f12ac72118872/w12-2.1.py">名字</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">first_name = "yu" #變數first_name為"自己的姓"
+last_name  = "chang" #變數last_name為"自己的名"
+print (first_name) #列印變數first_name
+print (last_name) #列印變數last_name</pre>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/8214869adb6c98a2f05dfd4610676df5/raw/477730323d74f19acc83ec2e6c4f12ac72118872/w12-2.2.py">名字+最愛的食物</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">name = input("What's your name?") #變數name為input所輸入之文字
+favorite_food = input ("What is your favorite food?") #變數favorite_food為input所輸入之文字
+print ("Hi! My name is " + name) #列印"Hi! My name is "(這段為文字) + name(name這個變數的數值)
+print ("My favorite food is " + favorite_food)  #列印"My favorite food is "(這段為文字) + favorite_food(favorite_food這個變數的數值)
+print (name + "'s favorite food is " + favorite_food) #列印name (數值)+ 's favorite food is (此段為文字)+favorite_food(數值)</pre>
+<p></p>
+<p>第三題:In a bookstore(在書店)</p>
+<p>說明:Lists and if... in... / else... (列表和<span>if... in... / else...)</span></p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/39538973a9b4443371d4430c95586417/raw/1582ceb6362b9010c83840c2706be3e1d6b340d6/w12-3.py">if</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">programming_books = ["Learn python", "Python for all",  "Intro to python"]
+print (programming_books)
+wanted_book = input("Hi! What book would you like to buy?")
+print (wanted_book)
+if wanted_book in programming_books:
+    print ("Yes, we sell it!")
+else:
+    print ("Sorry, we don't sell that book")</pre>
+<p></p><h1>HW 2</h1>
 <h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 2 and Part 3</p>
 <hr/>
