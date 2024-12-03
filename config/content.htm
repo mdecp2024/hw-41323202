@@ -72,6 +72,7 @@ print(space * (n - i - 1), end='') # 在每行前面印出空格 # 印出星號 
 <p></p>
 <p>心得:在製作的過程中如果不會寫的程式就可以問ChatGPT，雖然ChatGPT很方便，但還是會遇到一些問題，例如題目一的問題就是它的圓形會變得像橢圓形一樣，有時候甚至還會不對稱；題目二遇到的問題就是寫出來的成可能變成一個紅色或藍色的點，解決方法就是要多加一些條件或請他重寫一個程式就可以完成了。</p>
 <p>隨堂測驗:</p>
+<p>列出數字:</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">n=11 # 總共的行數
 space = '_'
 center = n//2
@@ -80,7 +81,43 @@ center = n//2
 for y in range(n):
     for x in range(n):
         print("(",x,",",y,")",sep="")</pre>
-<h3>w12</h3>
+<p>繪製棋盤:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+# 利用 html 建立 canvas 超文件物件
+canvas = html.CANVAS(width = 400, height = 400)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+# 每一格的 pixel 數
+gs = 20
+
+# gs*tc = canvas width and height
+
+ctx = canvas.getContext("2d")
+
+width = 11
+height = 11
+
+"'
+ctx.lineWidth = 1
+ctx.strokeStyle = '#000000'
+ctx.beginPath()
+#ctx.rect(i*gs, j*gs, gs, gs)
+ctx.rect(0, 0, 150, 100)
+ctx.stroke()
+"'    
+for i in range(width):
+    for j in range(height):
+        #dRect(i*gs,j*gs,gs,gs,1,"lightgrey")
+        ctx.lineWidth = 1
+        ctx.strokeStyle = 'lightgrey'
+        ctx.beginPath();
+        ctx.rect(i*gs,j*gs,gs,gs)
+        ctx.stroke();
+</pre>
+<p></p><h3>w12</h3>
 <p>第一題:input(), and print()</p>
 <p><span>input()程式範例:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/b4b0ccdf0be5e3d9a9eadffcd4761fbc/raw/2032b60c0697a64b9dfb28a95a1f9dbc43b7f2db/w12-1.1.py">What's your name?</a></span></p>
 <p><span>print()程式範例:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/b4b0ccdf0be5e3d9a9eadffcd4761fbc/raw/2032b60c0697a64b9dfb28a95a1f9dbc43b7f2db/w12-1.2.py">貓</a></span></p><h1>HW 2</h1>
