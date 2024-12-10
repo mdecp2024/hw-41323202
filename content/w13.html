@@ -142,7 +142,7 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">w12_hw << <a href='w12_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2<br /><h1>w13</h1>
-<p>用brythony做出<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?scr=https://gist.githubusercontent.com/41323202/7d8ddc5c4d1b40f18c72f473b8bb929e/raw/922788c0f2389cde1c095be04eafa686ec3f09f4/gistfile1.txt">兩</a>個200*200的重疊紅色正方形</p>
+<p>用brythony做出兩個200*200的重疊紅色正方形</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
 
@@ -179,62 +179,9 @@ for i in range(width):
      ctx.rect(i*gs+100,j*gs+100,gs,gs)
      ctx.stroke();
 </pre>
+<p><img alt="" height="347" src="./../images/1.png" width="359"/></p>
 <h4><a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/f6b8ecb4ce928576d527fcf9436dd549/raw/91d9be91f71708cb76ab6cad451790140eb9ff0c/w13_ai.py">w13_ai</a></h4>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import html
-from browser import document as doc
-import math
-
-# 利用 html 建立 canvas 超文件物件
-canvas = html.CANVAS(width = 400, height = 400)
-brython_div = doc["brython_div1"]
-brython_div &lt;= canvas
-
-# 每一格的 pixel 數
-gs = 100
-
-# gs*tc = canvas width and height
-
-ctx = canvas.getContext("2d")
-grid_size = 1
-point_size = max(int(grid_size/2), 1)
-
-width = 1  
-height = 1
-
-# 在左上的正方形繪製
-for i in range(width): 
-    for j in range(height):
-        ctx.lineWidth = 1
-        ctx.strokeStyle = 'red'
-        ctx.beginPath()
-        ctx.rect(i * gs+50, j * gs+50, gs, gs)
-        ctx.stroke()
-
-# 在左上的正方形加一條斜線
-ctx.beginPath()
-ctx.moveTo(50, 50)  # 從左上角起點
-ctx.lineTo(gs+50, gs+50)  # 到右下角
-ctx.strokeStyle = 'blue'  # 斜線顏色
-ctx.stroke()
-
-# 在右下角的正方形繪製
-for i in range(width): 
-    for j in range(height):
-        ctx.lineWidth = 1
-        ctx.strokeStyle = 'red'
-        ctx.beginPath()
-        ctx.rect(i * gs + 100, j * gs + 100, gs, gs)
-        ctx.stroke()
-        
-ctx.strokeStyle = 'black'       
-ctx.beginPath()
-ctx.arc(100, 100, 70.7, 0, 2 * 3.14)  # 圓心在(300, 300)，半徑為141.4
-ctx.stroke()
-
-ctx.beginPath()
-ctx.arc(150, 150, 70.7, 0, 2 * 3.14)  # 圓心在(300, 300)，半徑為141.4
-ctx.stroke()
-</pre><br />w12_hw << <a href='w12_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
+<p></p><br />w12_hw << <a href='w12_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
         
     <!-- footer -->
       <div class="container">
