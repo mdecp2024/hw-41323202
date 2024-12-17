@@ -186,7 +186,146 @@ todays_menu.pop(side_dish_index) #今日菜單.移除字串中的元素(side_dis
 print (todays_menu) #列印今日菜單
 todays_menu.insert(side_dish_index, "fries") #今日菜單.在字串中插入(side_dish_index, "fries")   這裡意思是加入薯條
 print (todays_menu) #列印今日菜單</pre>
-<p></p><h3>w13_hw</h3>
+<p></p>
+<p><span>第六題:</span>Traveling around the world<span>(環遊世界</span><span>)</span></p>
+<p><span>說明:</span>List slicing(清單切片)</p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/93c235cbb97fd3f9200feab8058a1cc6/raw/280bd1417c6ec56249125aff083601601f2522cc/w12-6.py">城市</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">cities = ["San Diego", "Prague", "Cape Town", "Tokyo", "Melbourne"]
+print (cities)
+print (cities[1])
+print (cities[1:4])
+print (cities[1:4:2])
+print (cities[0:3])
+print (cities[:3])
+print (cities[2:5])
+print (cities[2:])
+print (cities[0:5:2])
+print (cities[::2])
+print (cities[4])
+print (cities[-1])
+print (cities[-4:-1])
+cities[3:0:-1]
+cities[-2:-5:-1]
+print (cities[::-1])</pre>
+<p></p>
+<p><span>第七題:</span>Senses, planets, and a house(感官、行星和房子)</p>
+<p><span>說明:</span>Changing, adding, and removing list elements using slicing(使用切片更改、新增和刪除清單元素)</p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/0e3601fefa5f0b21383d50bebeaf3fba/raw/4f66ab989aebe43893f8cdbb76dba7c3aab1a0a3/w12-7-1.py">感官</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">senses = ["eyes", "nose", "ears", "tongue", "skin"]
+print (senses)
+senses[1] = "smell"
+print (senses)
+senses[3:5] = ["taste", "touch"]
+print (senses)
+senses[0:3:2] = ["sight", "hearing"]
+print (senses)</pre>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/504ad2dcbbf8ef338705cd00a4126139/raw/4e184645b37624ceb74a8e5a949a1c977a7d632b/w12-7-2.py">行星</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">planets = ["Mercury", "Mars", "Earth", "Neptune"]
+print (planets)
+planets = planets + ["Jupiter"]
+print (planets)
+planets = planets[0:2] + ["Venus"] + planets[2:5]
+print (planets)
+planets = planets[:5] + ["Uranus", "Saturn"] + planets[5:]
+print(planets)</pre>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/d4db402cc65eac3f00ec5ef9116df447/raw/db9297f5d25fcc732b4646f6095452237c298be9/w12-7-3.py">房子</a></p>
+<p><span></span></p>
+<p><span>第八題:</span>My friends' favorite dishes(我朋友最喜歡的菜)</p>
+<p><span>說明:</span>for ... in range() (在...範圍內())</p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/2dbd5c914f38dbab0af93592358aa9d5/raw/b8d506c44144f6f4b36662252fb146940b5cd126/w12-8.py">菜</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">friends = ["Geetha", "Luca", "Daisy", "Juhan"]
+dishes  = ["sushi", "burgers", "tacos", "pizza"]
+print ("My friends' names are:")
+print (friends)
+for index in range (0,4):
+    print ("index:  " + str(index))
+    print ("friend: " + friends[index])
+    print ("Their favorite dishes are:")
+print (dishes)
+for index in range (0,4):
+    print ("index:  " + str(index))
+    print ("dish: " + dishes[index])
+    for index in range (0,4):
+    print ("My friend " + friends[index] + "'s favorite dish is " + dishes[index])</pre>
+<p></p>
+<p><span>第九題:</span>At the zoo(在動物園)</p>
+<p><span>說明:</span>For loop with if... == ... / else(在迴圈 如果.../其他)</p>
+<p>程式範例:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/4652a78071e139adb6a92fb9348d0da1/raw/72e09efe641adb43ad07666445d21c392acd5844/w12-9.py">動物</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">animals = ["giraffe", "penguin", "dolphin"]
+print (animals)
+# for each position in the list
+for i in range (0, len(animals)):
+    print ("-- Beginning of loop --")
+    # print each element and its position
+    print ("The element in position " + str(i) + " is " + animals[i])
+    wanted_to_see = "penguin"
+    # for each position in the list
+for i in range (0, len(animals)):
+    # if the current animal is what you really wanted to see
+    if animals[i] == wanted_to_see:
+        # print out that that's the animal you really wanted to see
+        print ("I saw a " + animals[i] + " and I really wanted to see it!")
+    # if the current animal is not what you really wanted to see
+    else:
+        # just print out that you saw it
+        print ("I saw a " + animals[i])
+    </pre>
+<p><br/><span>第十題:</span>Where are my gloves?(我的手套在哪?)</p>
+<p>說明:For loop for searching(用搜尋的For循環)</p>
+<p>程式範例:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/4b9149710b130c929dfd4143c57173a8/raw/ae39cfe0cdcfe97ae748a778b997ef1cbeb6bb4b/w12-10.py">配件</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">accessories = ["belt", "hat", "gloves", "sunglasses", "ring"]
+print (accessories)
+# for each position in the list
+for i in range (len(accessories)):
+    #print each elements and its position
+    print ("The element "  + accessories[i] + " is in position " + str(i))
+    # for each position in the list
+for i in range (len(accessories)):
+    # if the length of the element equals 6
+    if len(accessories[i]) == 6:
+        # print the element, its position, and its number of characters
+        print ("The element " + accessories[i] + " is in position " + str(i) + " and it has 6 characters")
+        # for each position in the list
+for i in range (len(accessories)):
+    # if the length of the element is less than 6
+    if len(accessories[i]) &lt; 6:
+        # print the element, its position, and its number of characters
+        print ("The element " + accessories[i] + " is in position " + str(i) + " and it has less than 6 characters")  
+        # defining the threshold
+n_of_characters = 6 
+# for each position in the list 
+for i in range (len(accessories)):
+    # if the length of the element is greater than the threshold
+    if len(accessories[i]) &gt; n_of_characters:
+        # print the element, its position, and its number of characters
+        print ("The element " + accessories[i] + " is in position " + str(i) + " and it has more than " + str(n_of_characters) + " characters")
+        ing the threshold
+n_of_characters = 6 
+# for each position in the list 
+for i in range (len(accessories)):
+    # if the length of the element is not equal to the threshold
+    if len(accessories[i]) != n_of_characters:
+        # print the element, its position, and its number of characters
+        print ("The element " + accessories[i] + " is in position " + str(i) + " and it has a number of characters different from " + str(n_of_characters))
+        # defining the threshold
+position = 2 
+# for each position in the list 
+for i in range (len(accessories)):
+    # if the position of the element is less then or equal to to the threshold
+    if i &lt;= position:
+        # print the element, its position, and its position characteristic
+        print ("The element " + accessories[i] + " is in position " + str(i) + ", which is less than or equal to " + str(position))
+        # defining the threshold
+position = 2 
+# for each position in the list 
+for i in range (len(accessories)):
+    # if the position of the element is greater then or equal to to the threshold
+    if i &gt;= position:
+        # print the element, its position, and its position characteristic
+        print ("The element " + accessories[i] + " is in position " + str(i) + ", which is at least " + str(position))</pre>
+<p></p>
+<p></p>
+<p><span></span></p><h3>w13_hw</h3>
 <p>w13</p>
 <p>用brythony做出兩個200*200的重疊紅色正方形</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import html

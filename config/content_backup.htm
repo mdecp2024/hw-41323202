@@ -186,7 +186,91 @@ todays_menu.pop(side_dish_index) #今日菜單.移除字串中的元素(side_dis
 print (todays_menu) #列印今日菜單
 todays_menu.insert(side_dish_index, "fries") #今日菜單.在字串中插入(side_dish_index, "fries")   這裡意思是加入薯條
 print (todays_menu) #列印今日菜單</pre>
-<p></p><h3>w13_hw</h3>
+<p></p>
+<p><span>第六題:</span>Traveling around the world<span>(環遊世界</span><span>)</span></p>
+<p><span>說明:</span>List slicing(清單切片)</p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/93c235cbb97fd3f9200feab8058a1cc6/raw/280bd1417c6ec56249125aff083601601f2522cc/w12-6.py">城市</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">cities = ["San Diego", "Prague", "Cape Town", "Tokyo", "Melbourne"]
+print (cities)
+print (cities[1])
+print (cities[1:4])
+print (cities[1:4:2])
+print (cities[0:3])
+print (cities[:3])
+print (cities[2:5])
+print (cities[2:])
+print (cities[0:5:2])
+print (cities[::2])
+print (cities[4])
+print (cities[-1])
+print (cities[-4:-1])
+cities[3:0:-1]
+cities[-2:-5:-1]
+print (cities[::-1])</pre>
+<p></p>
+<p><span>第七題:</span>Senses, planets, and a house(感官、行星和房子)</p>
+<p><span>說明:</span>Changing, adding, and removing list elements using slicing(使用切片更改、新增和刪除清單元素)</p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/0e3601fefa5f0b21383d50bebeaf3fba/raw/4f66ab989aebe43893f8cdbb76dba7c3aab1a0a3/w12-7-1.py">感官</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">senses = ["eyes", "nose", "ears", "tongue", "skin"]
+print (senses)
+senses[1] = "smell"
+print (senses)
+senses[3:5] = ["taste", "touch"]
+print (senses)
+senses[0:3:2] = ["sight", "hearing"]
+print (senses)</pre>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/504ad2dcbbf8ef338705cd00a4126139/raw/4e184645b37624ceb74a8e5a949a1c977a7d632b/w12-7-2.py">行星</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">planets = ["Mercury", "Mars", "Earth", "Neptune"]
+print (planets)
+planets = planets + ["Jupiter"]
+print (planets)
+planets = planets[0:2] + ["Venus"] + planets[2:5]
+print (planets)
+planets = planets[:5] + ["Uranus", "Saturn"] + planets[5:]
+print(planets)</pre>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/d4db402cc65eac3f00ec5ef9116df447/raw/db9297f5d25fcc732b4646f6095452237c298be9/w12-7-3.py">房子</a></p>
+<p><span></span></p>
+<p><span>第八題:</span>My friends' favorite dishes(我朋友最喜歡的菜)</p>
+<p><span>說明:</span>for ... in range() (在...範圍內())</p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/2dbd5c914f38dbab0af93592358aa9d5/raw/b8d506c44144f6f4b36662252fb146940b5cd126/w12-8.py">菜</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">friends = ["Geetha", "Luca", "Daisy", "Juhan"]
+dishes  = ["sushi", "burgers", "tacos", "pizza"]
+print ("My friends' names are:")
+print (friends)
+for index in range (0,4):
+    print ("index:  " + str(index))
+    print ("friend: " + friends[index])
+    print ("Their favorite dishes are:")
+print (dishes)
+for index in range (0,4):
+    print ("index:  " + str(index))
+    print ("dish: " + dishes[index])
+    for index in range (0,4):
+    print ("My friend " + friends[index] + "'s favorite dish is " + dishes[index])</pre>
+<p></p>
+<p><span>第九題:</span>At the zoo(在動物園)</p>
+<p><span>說明:</span>For loop with if... == ... / else(在迴圈 如果.../其他)</p>
+<p>程式範例:<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/4652a78071e139adb6a92fb9348d0da1/raw/72e09efe641adb43ad07666445d21c392acd5844/w12-9.py">動物</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">animals = ["giraffe", "penguin", "dolphin"]
+print (animals)
+# for each position in the list
+for i in range (0, len(animals)):
+    print ("-- Beginning of loop --")
+    # print each element and its position
+    print ("The element in position " + str(i) + " is " + animals[i])
+    wanted_to_see = "penguin"
+    # for each position in the list
+for i in range (0, len(animals)):
+    # if the current animal is what you really wanted to see
+    if animals[i] == wanted_to_see:
+        # print out that that's the animal you really wanted to see
+        print ("I saw a " + animals[i] + " and I really wanted to see it!")
+    # if the current animal is not what you really wanted to see
+    else:
+        # just print out that you saw it
+        print ("I saw a " + animals[i])
+    </pre>
+<p><br/><br/></p><h3>w13_hw</h3>
 <p>w13</p>
 <p>用brythony做出兩個200*200的重疊紅色正方形</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import html
@@ -230,81 +314,133 @@ for i in range(width):
 <p><img alt="" height="311" src="/images/2.png" width="358"/></p>
 <p>w13_hw<a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/7d4199da10e1f5bc02a1943d854c4e1a/raw/8d13a86fc2675dcc7c1b2f0966c1c513c5cfac39/w13_hw.py">在圓的各區域著色</a></p>
 <p><img alt="" height="228" src="/images/3.png" width="252"/></p><h3>w14_ex</h3>
-<p><span>請根據兩個圓繪圖所圍成的</span><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/5eca62565d509668d731720f1994e127/raw/0e370b2ad0c429ab4c8905244022c27cfca8cfba/two_cicle_fill_ex1.py">區域</a><span>(目前圍成三個區域, 但若圓心移動可能彼此獨立)進行不同顏色著色, 條件是當各圓半徑與圓心座標變動時, 程式只需輸入兩個圓的圓心座標與半徑, 就可以完成各區域的著色任務.</span></p>
+<p><a href="https://mdecp2024.github.io/hw-41323202/content/Brython.html?src=https://gist.githubusercontent.com/41323202/b5e0475b4778d8224e6561a9c9014cd1/raw/26c32f52b812f5237318ee294cdf846ba672f835/w14_hw.py"><span>三個圓的區域塗色</span></a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
+import random
 import math
+ 
+# 定義一個函式來初始化畫布
+def initialize_canvas(canvas_width=400, canvas_height=400, id="brython_div1"):
+    """
+    初始化畫布，創建一個指定大小的 Canvas 元素，並將其加到 HTML 文件中。
+    返回畫布元素和它的 2D 繪圖上下文。
+    """
+    # 創建一個 canvas 元素，並設置其寬度與高度
+    canvas = html.CANVAS(width=canvas_width, height=canvas_height)
+    # 將創建的 canvas 元素添加到指定的 HTML div 元素中
+    brython_div = doc[id]  # 獲取指定 id 的 div 元素
+    brython_div &lt;= canvas  # 將 canvas 插入到該 div 中
+     
+    # 獲取 canvas 的 2D 繪圖上下文，這是進行繪圖的主要接口
+    ctx = canvas.getContext("2d")
+     
+    # 返回畫布和它的 2D 繪圖上下文
+    return canvas, ctx
+ 
+# 定義一個隨機顏色生成函式
+def random_color_generator():
+    """
+    生成一個隨機的 RGB 顏色字符串。
+    返回的顏色是 "rgb(r, g, b)" 格式，其中 r, g, b 是 0 到 255 之間的隨機整數。
+    """
+    r = random.randint(0, 255)  # 隨機生成紅色成分 (0-255)
+    g = random.randint(0, 255)  # 隨機生成綠色成分 (0-255)
+    b = random.randint(0, 255)  # 隨機生成藍色成分 (0-255)
+    return f"rgb({r}, {g}, {b})"  # 返回隨機顏色字符串
+ 
+# 判斷點 (px, py) 是否在圓內
+def is_point_in_circle(px, py, cx, cy, r):
+    """
+    判斷一個點 (px, py) 是否位於圓 (cx, cy, r) 內。
+    (cx, cy) 為圓心坐標，r 為圓的半徑。
+    """
+    # 使用圓的方程 (px - cx)² + (py - cy)² &lt;= r² 判斷點是否在圓內
+    return (px - cx) ** 2 + (py - cy) ** 2 &lt;= r ** 2
+ 
+# 使用者設定的圓心座標和半徑，並進行掃描線填充
+def draw_circles(x1, y1, r1, x2, y2, r2,x3, y3, r3):
+    """
+    根據傳入的兩個圓的圓心和半徑，繪製圓形並使用掃描線算法填充區域。
+    x1, y1, r1 是圓1的圓心坐標和半徑
+    x2, y2, r2 是圓2的圓心坐標和半徑
+    """
+    # 初始化畫布，創建並取得畫布和其 2D 上下文
+    canvas, ctx = initialize_canvas(400, 400)
+     
+    # 清空畫布，以便重新繪製
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+     
+    # 顏色區域存儲字典，存儲不同區域的顏色
+    color_dict = {}
+ 
+    # 使用掃描線方法填充區域，逐行掃描畫布上的每個像素
+    for py in range(0, canvas.height):  # 遍歷每一行的 y 坐標
+        # 當前掃描線的顏色初始化為 None，後面會根據位置選擇顏色
+        current_color = None 
+         
+        # 遍歷當前行中的每個像素點 (px, py)
+        for px in range(0, canvas.width):  # 遍歷每一列的 x 坐標
+            # 判斷該點是否在圓1內
+            in_circle1 = is_point_in_circle(px, py, x1, y1, r1)
+            # 判斷該點是否在圓2內
+            in_circle2 = is_point_in_circle(px, py, x2, y2, r2)
+            
+            in_circle3 = is_point_in_circle(px, py, x3, y3, r3)
+             
+            if in_circle1 and in_circle2:
+                # 如果點同時在兩個圓內，則是交集區域
+                if "intersection" not in color_dict:
+                    # 如果還沒有為交集區域分配顏色，則分配一個隨機顏色
+                    color_dict["intersection"] = random_color_generator()
+                # 設置當前掃描線的顏色為交集區域的顏色
+                current_color = color_dict["intersection"]
+            elif in_circle2 and in_circle3:
+                # 如果點同時在兩個圓內，則是交集區域
+                if "intersection1" not in color_dict:
+                    # 如果還沒有為交集區域分配顏色，則分配一個隨機顏色
+                    color_dict["intersection1"] = random_color_generator()
+                # 設置當前掃描線的顏色為交集區域的顏色
+                current_color = color_dict["intersection1"]
+            elif in_circle1:
+                # 如果點只在圓1內，則是圓1的區域
+                if "circle1" not in color_dict:
+                    # 如果還沒有為圓1分配顏色，則分配一個隨機顏色
+                    color_dict["circle1"] = random_color_generator()
+                # 設置當前掃描線的顏色為圓1區域的顏色
+                current_color = color_dict["circle1"]
+            elif in_circle2:
+                # 如果點只在圓2內，則是圓2的區域
+                if "circle2" not in color_dict:
+                    # 如果還沒有為圓2分配顏色，則分配一個隨機顏色
+                    color_dict["circle2"] = random_color_generator()
+                # 設置當前掃描線的顏色為圓2區域的顏色
+                current_color = color_dict["circle2"]
+            elif in_circle3:
+                # 如果點只在圓2內，則是圓2的區域
+                if "circle3" not in color_dict:
+                    # 如果還沒有為圓2分配顏色，則分配一個隨機顏色
+                    color_dict["circle3"] = random_color_generator()
+                # 設置當前掃描線的顏色為圓2區域的顏色
+                current_color = color_dict["circle3"]
+            else:
+                # 如果點不在任何圓內，則是背景區域
+                current_color = "white"  # 背景色設為白色
+            
+ 
+            # 設置當前像素的顏色並進行填充
+            ctx.fillStyle = current_color
+            # 填充當前像素 (px, py)，並且寬度和高度均為 1 像素
+            ctx.fillRect(px, py, 1, 1)  # 填充一個像素
+ 
+# 直接設定圓心和半徑
+x1, y1, r1 = 100, 200, 75  # 圓1：圓心 (150, 200)，半徑 100
+x2, y2, r2 = 200, 200, 75  # 圓2：圓心 (250, 200)，半徑 100
+x3, y3, r3 = 300, 200, 75  # 圓2：圓心 (250, 200)，半徑 100
+ 
+# 呼叫畫圓函式，並繪製兩個圓
+draw_circles(x1, y1, r1, x2, y2, r2,x3, y3, r3)
 
-# 建立畫布 (canvas)
-canvas = html.CANVAS(width=600, height=600)  # 設定畫布大小
-brython_div = doc["brython_div1"]
-brython_div &lt;= canvas
-
-ctx = canvas.getContext("2d")
-
-grid_size = 2  # 降低格子大小來實現更細緻的填充
-ctx.lineWidth = 1  # 設定線寬
-
-# 繪製兩個外切圓 (黑色)
-ctx.strokeStyle = 'black'
-
-# 第一個圓
-ctx.beginPath()
-ctx.arc(200, 200, 141.4, 0, 2 * math.pi)  # 圓心 (200, 200)，半徑 141.4
-ctx.stroke()
-
-# 第二個圓
-ctx.beginPath()
-ctx.arc(300, 300, 141.4, 0, 2 * math.pi)  # 圓心 (300, 300)，半徑 141.4
-ctx.stroke()
-
-# 判定函式
-def point_in_circle1(x, y):
-    cx, cy, r = 200, 200, 141.4  # 第一個圓的圓心和半徑
-    return (x - cx)**2 + (y - cy)**2 &lt; r**2
-
-def point_in_circle2(x, y):
-    cx, cy, r = 300, 300, 141.4  # 第二個圓的圓心和半徑
-    return (x - cx)**2 + (y - cy)**2 &lt; r**2
-
-def point_on_line_segment(x, y):
-    # 判斷點是否在直線段上 (從 (100, 100) 到 (300, 300))
-    return 100 &lt;= x &lt;= 300 and 100 &lt;= y &lt;= 300 and y == x
-
-def point_above_line(x, y):
-    # 判斷點是否在直線 y = x 之上
-    return y &lt; x
-
-def point_below_line(x, y):
-    # 判斷點是否在直線 y = x 之下
-    return y &gt; x
-
-# 根據區域顏色來判定顏色
-def get_region_color(x, y):
-    # 只有當點在圓內時，才進行顏色填充
-    if point_in_circle1(x, y):
-        return 'green'  # 在第一個圓內
-    elif point_in_circle2(x, y):
-        return 'red'  # 在第二個圓內
-    elif point_on_line_segment(x, y):
-        return 'black'  # 在直線段上
-    #elif point_above_line(x, y):
-        return 'brown'  # 在直線上方
-    #elif point_below_line(x, y):
-        return 'grey'  # 在直線下方
-    else:
-        return 'white'  # 在圓外區域顯示為白色
-
-# 掃描每 2 像素的格點並上色，這樣填充更細緻
-def scan_and_draw():
-    for x in range(0, 600, grid_size):  # 遍歷畫布範圍，從左到右
-        for y in range(0, 600, grid_size):  # 從上到下
-            color = get_region_color(x, y)  # 獲取當前點的區域顏色
-            ctx.fillStyle = color  # 設定顏色
-            ctx.fillRect(x, y, grid_size, grid_size)  # 填充小矩形，代表區域
-
-# 開始掃描並繪製顏色
-scan_and_draw()
 </pre>
 <p><span></span></p>
 <p></p><h1>HW 2</h1>
